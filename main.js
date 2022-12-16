@@ -12,9 +12,6 @@ function popupclose() {
 }
 
 
-
-
-
 function addcard() {
     document.getElementById('pop-up').style.display = "none"
     document.getElementById('main-container').style.filter = "blur(0px)"
@@ -64,7 +61,7 @@ function addcard() {
     createbuttondelete.addEventListener('click', function removeCardFunction() {
         console.log('hello');
 
-        createitem.style.display = "none"
+        createitem.remove()
 
     })
 
@@ -99,7 +96,7 @@ document.getElementById('add-2').addEventListener('click', function addpara() {
 
     inputbox2 = document.getElementById('input-box-2').value
 
-    createpara = document.createElement('p')
+    let createpara = document.createElement('p')
     document.getElementById('para-list').appendChild(createpara)
     
     createmarkdone = document.createElement('span')
@@ -118,11 +115,10 @@ document.getElementById('add-2').addEventListener('click', function addpara() {
         createmarkdone.style.display = "none"
         })
 
-
+        
 })
 
     
-
 
 
 
